@@ -25,6 +25,16 @@ public class Radio {
 		   checkbox.click();
 		   Thread.sleep(1000);
 		   }
+		   String displayed_message=driver.findElement(By.xpath("//p")).getAttribute("innerHTML");
 		
+		   if(displayed_message.contains("Congratulations"))
+			{
+				System.out.println("Authentication Successfull");
+				
+			}
+			else
+			{
+				System.out.println("Authentication NOT Successfull");
+			}
 	}
 }
